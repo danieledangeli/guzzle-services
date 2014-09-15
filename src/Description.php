@@ -7,31 +7,31 @@ use GuzzleHttp\Url;
 /**
  * Represents a Guzzle service description
  */
-class Description
+class Description implements DescriptionInterface
 {
     /** @var array Array of {@see OperationInterface} objects */
-    private $operations = [];
+    protected $operations = [];
 
     /** @var array Array of API models */
-    private $models = [];
+    protected $models = [];
 
     /** @var string Name of the API */
-    private $name;
+    protected $name;
 
     /** @var string API version */
-    private $apiVersion;
+    protected $apiVersion;
 
     /** @var string Summary of the API */
-    private $description;
+    protected $description;
 
     /** @var array Any extra API data */
-    private $extraData = [];
+    protected $extraData = [];
 
     /** @var string baseUrl/basePath */
-    private $baseUrl;
+    protected $baseUrl;
 
     /** @var SchemaFormatter */
-    private $formatter;
+    protected $formatter;
 
     /**
      * @param array $config  Service description data
